@@ -1,0 +1,76 @@
+{
+  "manifest_version": "2.0.0",
+  "app_uuid": "c4433a20-f407-4ef9-bfd2-72cb6ff35a79",
+  "app_id": "vsphere",
+  "display_on_public_website": true,
+  "tile": {
+    "overview": "README.md#Overview",
+    "configuration": "README.md#Setup",
+    "support": "README.md#Support",
+    "changelog": "CHANGELOG.md",
+    "description": "Understand how vSphere resource usage affects your application.",
+    "title": "vSphere",
+    "media": [
+      {
+        "media_type": "image",
+        "caption": "FILL IN Image 1 caption",
+        "image_url": "<FILL IN>"
+      },
+      {
+        "media_type": "image",
+        "caption": "FILL IN Image 2 caption",
+        "image_url": "<FILL IN>"
+      },
+      {
+        "media_type": "image",
+        "caption": "FILL IN Image 3 caption",
+        "image_url": "<FILL IN>"
+      }
+    ],
+    "classifier_tags": [
+      "Offering::Integration",
+      "Supported OS::Linux",
+      "Supported OS::Windows",
+      "Supported OS::macOS",
+      "Category::Cloud",
+      "Category::Network"
+    ]
+  },
+  "assets": {
+    "integration": {
+      "auto_install": true,
+      "source_type_id": 29127935,
+      "source_type_name": "vSphere",
+      "configuration": {
+        "spec": "assets/configuration/spec.yaml"
+      },
+      "events": {
+        "creates_events": true
+      },
+      "metrics": {
+        "prefix": "vsphere.",
+        "check": [
+          "vsphere.cpu.usage.avg",
+          "vsphere.vm.count"
+        ],
+        "metadata_path": "metadata.csv"
+      },
+      "service_checks": {
+        "metadata_path": "assets/service_checks.json"
+      }
+    },
+    "dashboards": {
+      "tony-vsphere-overview": "assets/dashboards/vsphere_overview.json",
+      "Tony VMware vSphere TKG - Overview": "assets/dashboards/vmware_vsphere_tkg_-_overview.json",
+      "Tony VMware vSphere - Property Metrics": "assets/dashboards/vmware_vsphere-_property_metrics.json"
+    },
+    "monitors": {},
+    "saved_views": {}
+  },
+  "author": {
+    "support_email": "ntbquoc2015@gmail.com",
+    "name": "Tony Nguyen",
+    "homepage": "",
+    "sales_email": ""
+  }
+}
