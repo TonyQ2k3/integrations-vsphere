@@ -1,0 +1,73 @@
+{
+  "manifest_version": "2.0.0",
+  "app_uuid": "18d8b69d-ca34-4f2f-9cdf-ef7da148b519",
+  "app_id": "esxi-alt",
+  "display_on_public_website": true,
+  "tile": {
+    "overview": "README.md#Overview",
+    "configuration": "README.md#Setup",
+    "support": "README.md#Support",
+    "changelog": "CHANGELOG.md",
+    "description": "Monitor the health of your ESXi machines and VMs",
+    "title": "ESXi_Alt",
+    "media": [
+      {
+        "media_type": "image",
+        "caption": "FILL IN Image 1 caption",
+        "image_url": "<FILL IN>"
+      },
+      {
+        "media_type": "image",
+        "caption": "FILL IN Image 2 caption",
+        "image_url": "<FILL IN>"
+      },
+      {
+        "media_type": "image",
+        "caption": "FILL IN Image 3 caption",
+        "image_url": "<FILL IN>"
+      }
+    ],
+    "classifier_tags": [
+      "Supported OS::Linux",
+      "Supported OS::Windows",
+      "Supported OS::macOS",
+      "Category::Cloud",
+      "Category::Network",
+      "Category::OS & System",
+      "Offering::Integration",
+      "Submitted Data Type::Metrics"
+    ]
+  },
+  "assets": {
+    "integration": {
+      "auto_install": true,
+      "source_type_id": 29218473,
+      "source_type_name": "ESXi_Alt",
+      "configuration": {
+        "spec": "assets/configuration/spec.yaml"
+      },
+      "events": {
+        "creates_events": false
+      },
+      "metrics": {
+        "prefix": "esxi_alt.",
+        "check": "",
+        "metadata_path": "metadata.csv"
+      },
+      "service_checks": {
+        "metadata_path": "assets/service_checks.json"
+      }
+    },
+    "dashboards": {
+        "<FILL IN dashboard short_name ex: integration name overview>": "assets/dashboards/<FILL IN>.json"
+    },
+    "monitors": {},
+    "saved_views": {}
+  },
+  "author": {
+    "support_email": "ntbquoc2015@gmail.com",
+    "name": "Tony Nguyen",
+    "homepage": "",
+    "sales_email": ""
+  }
+}
