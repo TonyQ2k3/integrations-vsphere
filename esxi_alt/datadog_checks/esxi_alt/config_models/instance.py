@@ -18,16 +18,69 @@ from datadog_checks.base.utils.models import validation
 from . import defaults, validators
 
 
+class CollectPerInstanceFilters(BaseModel):
+    model_config = ConfigDict(
+        arbitrary_types_allowed=True,
+        frozen=True,
+    )
+    host: Optional[tuple[str, ...]] = None
+    vm: Optional[tuple[str, ...]] = None
+
+
+class MetricFilters(BaseModel):
+    model_config = ConfigDict(
+        arbitrary_types_allowed=True,
+        frozen=True,
+    )
+    host: Optional[tuple[str, ...]] = None
+    vm: Optional[tuple[str, ...]] = None
+
+
+class MetricPatterns(BaseModel):
+    model_config = ConfigDict(
+        arbitrary_types_allowed=True,
+        frozen=True,
+    )
+    exclude: Optional[tuple[str, ...]] = None
+    include: Optional[tuple[str, ...]] = None
+
+
+class ResourceFilter(BaseModel):
+    model_config = ConfigDict(
+        arbitrary_types_allowed=True,
+        frozen=True,
+    )
+    patterns: Optional[tuple[str, ...]] = None
+    property: Optional[str] = None
+    resource: Optional[str] = None
+    type: Optional[str] = None
+
+
 class InstanceConfig(BaseModel):
     model_config = ConfigDict(
         validate_default=True,
         arbitrary_types_allowed=True,
         frozen=True,
     )
-    empty_default_hostname: Optional[bool] = None
+    collect_per_instance_filters: Optional[CollectPerInstanceFilters] = None
+    disable_generic_tags: Optional[bool] = None
+    empty_default_hostname: bool
+    excluded_host_tags: Optional[tuple[str, ...]] = None
+    host: str
+    metric_filters: Optional[MetricFilters] = None
+    metric_patterns: Optional[MetricPatterns] = None
     min_collection_interval: Optional[float] = None
+    password: str
+    proxy: Optional[str] = None
+    resource_filters: Optional[tuple[ResourceFilter, ...]] = None
     service: Optional[str] = None
+    ssl_cafile: Optional[str] = None
+    ssl_capath: Optional[str] = None
+    ssl_verify: Optional[bool] = None
     tags: Optional[tuple[str, ...]] = None
+    use_configured_hostname: Optional[bool] = None
+    use_guest_hostname: Optional[bool] = None
+    username: str
 
     @model_validator(mode='before')
     def _initial_validation(cls, values):

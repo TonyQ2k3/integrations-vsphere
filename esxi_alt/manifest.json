@@ -1,15 +1,15 @@
 {
   "manifest_version": "2.0.0",
-  "app_uuid": "acd1b79f-4b94-496a-962f-21153e296c05",
-  "app_id": "esxi",
+  "app_uuid": "18d8b69d-ca34-4f2f-9cdf-ef7da148b519",
+  "app_id": "esxi-alt",
   "display_on_public_website": true,
   "tile": {
     "overview": "README.md#Overview",
     "configuration": "README.md#Setup",
     "support": "README.md#Support",
     "changelog": "CHANGELOG.md",
-    "description": "<FILL IN - A brief description of what this offering provides>",
-    "title": "ESXi",
+    "description": "Monitor the health of your ESXi machines and VMs",
+    "title": "ESXi_Alt",
     "media": [
       {
         "media_type": "image",
@@ -28,21 +28,21 @@
       }
     ],
     "classifier_tags": [
-      "<Add relevant tags from this list: https://docs.datadoghq.com/developers/integrations/check_references/#classifier-tags>",
       "Supported OS::Linux",
       "Supported OS::Windows",
       "Supported OS::macOS",
-      "Category::<FILL IN>",
-      "Offering::<FILL IN>",
-      "Queried Data Type::<FILL IN>",
-      "Submitted Data Type::<FILL IN>"
+      "Category::Cloud",
+      "Category::Network",
+      "Category::OS & System",
+      "Offering::Integration",
+      "Submitted Data Type::Metrics"
     ]
   },
   "assets": {
     "integration": {
       "auto_install": true,
-      "source_type_id": 29214475,
-      "source_type_name": "ESXi",
+      "source_type_id": 29218473,
+      "source_type_name": "ESXi_Alt",
       "configuration": {
         "spec": "assets/configuration/spec.yaml"
       },
@@ -50,7 +50,7 @@
         "creates_events": false
       },
       "metrics": {
-        "prefix": "esxi.",
+        "prefix": "esxi_alt.",
         "check": "",
         "metadata_path": "metadata.csv"
       },

@@ -1,8 +1,8 @@
-# Agent Check: ESXi
+# Agent Check: ESXi_Alt
 
 ## Overview
 
-This check monitors [ESXi][1].
+This check monitors [ESXi_Alt][1].
 
 Include a high level overview of what this integration does:
 - What does your product do (in 1-2 sentences)?
@@ -13,20 +13,20 @@ Include a high level overview of what this integration does:
 
 ### Installation
 
-To install the ESXi check on your host:
+To install the ESXi_Alt check on your host:
 
 
 1. Install the [developer toolkit]
 (https://docs.datadoghq.com/developers/integrations/python/)
  on any machine.
 
-2. Run `ddev release build esxi` to build the package.
+2. Run `ddev release build esxi_alt` to build the package.
 
 3. [Download the Datadog Agent][2].
 
 4. Upload the build artifact to any host with an Agent and
  run `datadog-agent integration install -w
- path/to/esxi/dist/<ARTIFACT_NAME>.whl`.
+ path/to/esxi_alt/dist/<ARTIFACT_NAME>.whl`.
 
 ### Configuration
 
@@ -40,15 +40,15 @@ To install the ESXi check on your host:
 
 ### Metrics
 
-ESXi does not include any metrics.
+ESXi_Alt does not include any metrics.
 
 ### Service Checks
 
-ESXi does not include any service checks.
+ESXi_Alt does not include any service checks.
 
 ### Events
 
-ESXi does not include any events.
+ESXi_Alt does not include any events.
 
 ## Troubleshooting
 
@@ -57,10 +57,10 @@ Need help? Contact [Datadog support][3].
 [1]: **LINK_TO_INTEGRATION_SITE**
 [2]: https://app.datadoghq.com/account/settings/agent/latest
 [3]: https://docs.datadoghq.com/agent/kubernetes/integrations/
-[4]: https://github.com/DataDog/integrations-extras/blob/master/esxi/datadog_checks/esxi/data/conf.yaml.example
+[4]: https://github.com/DataDog/integrations-extras/blob/master/esxi_alt/datadog_checks/esxi_alt/data/conf.yaml.example
 [5]: https://docs.datadoghq.com/agent/guide/agent-commands/#start-stop-and-restart-the-agent
 [6]: https://docs.datadoghq.com/agent/guide/agent-commands/#agent-status-and-information
-[7]: https://github.com/DataDog/integrations-extras/blob/master/esxi/metadata.csv
-[8]: https://github.com/DataDog/integrations-extras/blob/master/esxi/assets/service_checks.json
+[7]: https://github.com/DataDog/integrations-extras/blob/master/esxi_alt/metadata.csv
+[8]: https://github.com/DataDog/integrations-extras/blob/master/esxi_alt/assets/service_checks.json
 [9]: https://docs.datadoghq.com/help/
 

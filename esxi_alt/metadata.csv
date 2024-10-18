@@ -1,0 +1,12 @@
+metric_name,metric_type,interval,unit_name,per_unit_name,description,orientation,integration,short_name,curated_metric
+esxi_alt.cpu.coreUtilization.avg,gauge,,percent,,CPU utilization of the corresponding core (if hyper-threading is enabled) as a percentage,-1,esxi_alt,cpu coreUtilization avg,
+esxi_alt.cpu.usage.avg,gauge,,percent,,Percentage of CPU capacity being used,-1,esxi_alt,cpu usage avg,
+esxi_alt.cpu.used.sum,gauge,,millisecond,,"Time accounted to the virtual machine. If a system service runs on behalf of this virtual machine, the time spent by that service (represented by cpu.system) should be charged to this virtual machine. If not, the time spent (represented by cpu.overlap) should not be charged against this virtual machine.",0,esxi_alt,cpu used sum,
+esxi_alt.cpu.utilization.avg,gauge,,percent,,CPU utilization as a percentage during the interval (CPU usage and CPU utilization might be different due to power management technologies or hyper-threading),-1,esxi_alt,cpu utilization avg,
+esxi_alt.host.can_connect,gauge,,,,Whether the check can connect to the ESXi host or not.,0,esxi_alt,host connect,
+esxi_alt.host.count,gauge,,,,Timeseries with value 1 for each ESXi Host. Make 'sum by {X}' queries to count all the Hosts with the tag X.,0,esxi_alt,host count,
+esxi_alt.mem.active.avg,gauge,,kibibyte,,"Amount of memory that is actively used, as estimated by VMkernel based on recently touched memory pages",-1,esxi_alt,mem active avg,
+esxi_alt.mem.totalCapacity.avg,gauge,,mebibyte,,Total amount of memory reservation used by and available for powered-on virtual machines and vSphere services on the host,1,esxi_alt,mem totalCapacity avg,
+esxi_alt.mem.unreserved.avg,gauge,,kibibyte,,"Amount of memory that is unreserved. Memory reservation not used by the Service Console, VMkernel, vSphere services and other powered on VMs user-specified memory reservations and overhead memory",0,esxi_alt,mem unreserved avg,
+esxi_alt.mem.usage.avg,gauge,,percent,,Memory usage as percent of total configured or available memory,-1,esxi_alt,mem usage avg,
+esxi_alt.vm.count,gauge,,,,Timeseries with value 1 for each VM. Make 'sum by {X}' queries to count all the VMs with the tag X.,0,esxi_alt,vm count,
